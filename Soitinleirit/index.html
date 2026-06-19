@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>LMU - Piano - digitaalinen aineisto</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #lightgreen;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body style="font-family:Arial" bgcolor="lightblue">
+  <h1 style="text-align:center">LMU musiikkileiri: piano</h1>
+  <h3 style="text-align:center">Opetussuunnitelma</h3>
+  <h3 style="text-align:center"><a href=etusivu.html>Etusivulle</a></h3>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'maanantai')">maanantai</button>
+  <button class="tablinks" onclick="openCity(event, 'tiistai')">tiistai</button>
+  <button class="tablinks" onclick="openCity(event, 'keskiviikko')">keskiviikko</button>
+  <button class="tablinks" onclick="openCity(event, 'torstai')">torstai</button>
+  <button class="tablinks" onclick="openCity(event, 'perjantai')">perjantai</button>
+
+</div>
+
+<div id="maanantai" class="tabcontent">
+  <h3>Maanantai - aloituspäivä</h3>
+  <li>Tutustumme pianoon ja opimme, mistä kohtaa soitetaan.</li>
+  <li>Opettelemme koskettimien värit.</li>
+  <li>Soitamme yksinkertaisen kappaleen.</li>
+  <li>Opimme soittamaan viidellä sormella ja soitamme siten yksinkertaisen kappaleen.</li>
+</div>
+
+<div id="tiistai" class="tabcontent">
+  <h3>Tiistai - teoriapäivä</h3>
+  <li>Opimme musiikin aika-arvot ulkoa.</li>
+  <li>Opimme, mitä pisteelliset nuotit tarkoittavat.</li>
+  <li>Kertaamme koskettimien värejä.</li>
+</div>
+
+<div id="keskiviikko" class="tabcontent">
+  <h3>Keskiviikko - kertauspäivä</h3>
+  <li>Kertaamme musiikin aika-arvoja.</li>
+  <li>Kertaamme viidellä sormella soittamista.</li>
+  <li>Pidämme pienen testin koskettimien väreistä.</li>
+</div>
+
+<div id="torstai" class="tabcontent">
+  <h3>Torstai - soittopäivä</h3>
+  <li>Soitamme kappaleita siten, miten olemme oppineet.</li>
+</div>
+
+<div id="perjantai" class="tabcontent">
+  <h3>Perjantai - soitto- ja koepäivä</h3>
+  <li>Kertaamme koekappaletta.</li>
+  <li>Pidämme soittokokeen jostain kappaleesta.</li>
+  <li>Soitamme.</li>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
