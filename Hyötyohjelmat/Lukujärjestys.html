@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukujärjestys</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        .container { display: flex; gap: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Lukujärjestys</h2>
+    <div>
+        <label>Luokka:</label>
+        <select id="classSelect">
+            <option value="2a">2A</option>
+            <option value="6a">6A</option>
+        </select>
+        <label>Luokkahuone:</label>
+        <select id="roomSelect">
+            <option value="100">100</option>
+            <option value="101">101</option>
+            <option value="102">102</option>
+            <option value="103">103</option>
+        </select>
+        <label>Aine:</label>
+        <input type="text" id="subject">
+        <label>Aloitusaika:</label>
+        <input type="time" id="startTime">
+        <label>Lopetusaika:</label>
+        <input type="time" id="endTime">
+        <button onclick="addLesson()">Lisää tunti</button>
+    </div>
+    
+    <div class="container">
+        <div>
+            <h3>2A-luokan lukujärjestys</h3>
+            <table id="class-2a">
+                <tr><th>Aloitusaika</th><th>Lopetusaika</th><th>Aine</th></tr>
+            </table>
+        </div>
+        <div>
+            <h3>6A-luokan lukujärjestys</h3>
+            <table id="class-6a">
+                <tr><th>Aloitusaika</th><th>Lopetusaika</th><th>Aine</th></tr>
+            </table>
+        </div>
+        <div>
+            <h3>Luokkahuone 100</h3>
+            <table id="room-100">
+              <tr><th>Aloitusaika</th><th>Lopetusaika</th><th>Aine</th></tr>
+            </table>
+        </div>
+        <div>
+            <h3>Luokkahuone 101</h3>
+            <table id="room-101">
+                <tr><th>Aloitusaika</th><th>Lopetusaika</th><th>Aine</th></tr>
+            </table>
+        </div>
+        <div>
+            <h3>Luokkahuone 102</h3>
+            <table id="room-102">
+                <tr><th>Aloitusaika</th><th>Lopetusaika</th><th>Aine</th></tr>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function addLesson() {
+            let classValue = document.getElementById("classSelect").value;
+            let roomValue = document.getElementById("roomSelect").value;
+            let subject = document.getElementById("subject").value;
+            let startTime = document.getElementById("startTime").value;
+            let endTime = document.getElementById("endTime").value;
+            
+            if (subject && startTime && endTime) {
+                addToSchedule(`class-${classValue}`, startTime, endTime, subject);
+                addToSchedule(`room-${roomValue}`, startTime, endTime, subject);
+            }
+        }
+        
+        function addToSchedule(tableId, startTime, endTime, subject) {
+            let table = document.getElementById(tableId);
+            if (!table) {
+                console.error(`Taulukkoa '${tableId}' ei löydy.`);
+                return;
+            }
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            cell1.innerText = startTime;
+            cell2.innerText = endTime;
+            cell3.innerText = subject;
+        }
+    </script>
+</body>
+</html>
