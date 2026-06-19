@@ -1,0 +1,1 @@
+Kun oman pelin kehitys oli mennyt haasteelliseksi, yksinkertaistin idean Piano Points -peliksi. Lopulta sain luotua yksinkertaisen version Piano Pointsista, minkä jälkeen loin samanlaisen version myös Uke Starsista. Kumpikaan versio ei kuitenkaan toiminut kovin hyvin, joten ne jäivät historiaan.
