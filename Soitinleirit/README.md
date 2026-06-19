@@ -1,0 +1,1 @@
+Aloitin aikoinaan HTML-nettisivuprojektin, jossa loin digiopetusmateriaalit erilaisia musiikkileirejä varten. Sivun tavoite oli tarjota digiopetusmateriaalit eri soittimille suunnatuille leireille. Projekti jäi kuitenkin keskeneräiseksi, mutta hyväksi pohjaksi muille HTML-sivuilleni.
