@@ -1,3 +1,5 @@
 Kesällä 2024 halusin kehittää oman käyttöjärjestelmän. Kevyt Linux-jakelu kuulosti mukavalta kehityskohteelta. Käytin silloin kevyttä Puppy Linux -käyttöjärjestelmää, josta löytyi työkalu, jolla pystyi tallentamaan nykyisen käyttöjärjestelmän levytiedostoksi. Sain idean kehittää SuomiPup-niminen Puppy Linux -versio, joka olisi suomen kielelle mukauttamani versio Puppy Linuxista. Tavoitteeni oli aikoinaan rakentaa verkkosivut täynnä tietoa omasta käyttöjärjestelmästä. Käyttöjärjestelmä jäi kuitenkin kehittämättä ja julkaisematta haasteellisuutensa vuoksi, mutta verkkosivut sain sille kehitettyä.
 
 Minua kiinnosti kesällä 2024 myös kevyet HTML-sivut, jotka toimisivat HTML3-stantardin merkeissä. Halusin kehittää omalle käyttöjärjestelmälleni kevyet kotisivut sekä vielä kotisivuista äärimmäisen yksinkertaiset versiot. Löydät molemmat sivuversiot tästä kansiosta.
+
+Käyttöjärjestelmän kehityksen haasteellisuuden vuoksi SuomiPup Linux ei ole saatavilla eikä tule olemaankaan. Saatavilla olevat valmiit Linux-jakelut ovat oikein hyvä vaihtoehto. Kaikkea ei tarvitse rakentaa itse! :D
