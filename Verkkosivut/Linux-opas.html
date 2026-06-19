@@ -1,0 +1,103 @@
+<html>
+  <title>Linux-opas</title>
+  <body style="font-family:Arial" bgcolor="lightblue">
+    <h1 style="text-align:center">Linux-opas</h1>
+    <style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<p>Klikkaa, jotta saat tietoa aiheesta.</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'asennus')">Asentaminen</button>
+  <button class="tablinks" onclick="openCity(event, 'distrot')">Jakelut</button>
+  <button class="tablinks" onclick="openCity(event, 'muuta')">Muuta</button>
+</div>
+
+<div id="asennus" class="tabcontent">
+  <h3>Linuxin asentaminen - asenna alla olevien ohjeiden mukaisesti</h3>
+  <p>1. Lataa sovellus <a href="https://www.balena.io/etcher">balenaEtcher</a>.</p>
+  <p>2. Osta muistitikku, jossa on tallennustilaa noin 32 gt.</p>
+  <p>3. Kiinnitä tikku koneeseen ja avaa Etcher. Irrota muut muistitikut koneesta!</p>
+  <p>4. Valitse, minkä Linux-jakelun (eli distribuution) haluat asentaa.</p>
+  <p>5. Valitse Etcherissä laitteeksi se ainoa, joka siinä pitäisi olla.
+  Valitse tiedostoksi lataamasi Linuxin ISO-tiedosto.</p>
+  <p>6. Klikkaa Flash-painiketta. Odota hetki!</p>
+  <p>7. Kun kaikki on valmista, sammuta tietokone. Kun painat virtapainiketta, avaa
+  BIOS ja laita Boot-valikosta asetukset niin, että USB-muistitikku käynnistyy
+  ensimmäisenä.</p>
+  <p>8. Asenna Linux. Kun Linux avautuu muistitikulta, se ei luultavasti vielä
+  tallenna mitään tekemiäsi muutoksia. Voit asentaa sen jostain. Ainakin Linux
+  Mintissä työpöydällä on asennuskuvake.</p>
+</div>
+
+<div id="distrot" class="tabcontent">
+  <h3>Linux-jakelut</h3>
+  <p>Linux-<b>jakelu</b> tulee sanasta <b>distribuutio</b>. Siitä käytetään
+  lyhyempää sanaa <b>distro</b>.</p>
+  <p>Linux-distribuutioita on olemassa satoja. Voit valita sellaisen, mikä
+  sopii juuri sinulle. Pelkkään netin surffailuun riittää, että asennat esim.
+  Linux Mintin Cinnamon-työpöytäympäristöllä.</p>
+  <p>Hyviä Linux-distribuutioita ovat <a href="https://www.manjaro.org/">Manjaro</a>,
+  <a href="https://www.linuxmint.com/">Linux Mint</a> ja <a href="https://ubuntu.com/">Ubuntu.</a></p>
+</div>
+
+<div id="muuta" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+  </body>
+</html>
