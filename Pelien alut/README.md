@@ -1,0 +1,1 @@
+Aloitin aikoinaan useita peliaiheisia projekteja ja loin niille ensimmäiset aloitussivut, mutta en kuitenkaan mitään enempää. Tässä kansiosta löytyy näitä pelienalkuja. Loin mm. seuraavien pelien alut:
